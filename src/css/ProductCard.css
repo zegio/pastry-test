@@ -1,0 +1,117 @@
+.contain-card-image{
+  border: 5px solid #eee;
+  opacity: 1;
+  width: 400px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 100px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-box-shadow: 5px -5px 13px 0px rgba(204,204,204,1);
+  -moz-box-shadow: 5px -5px 13px 0px rgba(204,204,204,1);
+  box-shadow: 5px -5px 13px 0px rgba(204,204,204,1);  
+}
+.contain-card-image img{
+  width: 400px;
+}
+
+.contain-card-price{
+  width: 100px;
+  height: 100px;
+  background-color: rgb(199, 85, 85);
+  border-radius: 100%;
+  position: absolute;
+  bottom: -10px;
+  left: 75%;
+  z-index: 12;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  padding-top: 25px;
+  color: white;
+  border: 5px solid #fafafa;
+  transform: rotate(-15deg);
+}
+
+.contain-card-name{
+  background-color: #eee;
+  position: relative;
+  top: 295px;
+  width: 400px;
+  left: -5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  padding: 20px;
+  z-index: 11;
+}
+
+
+.container-card-ingredients{
+  min-height: 0px;
+  height: 0px;
+  overflow: hidden;
+  background-color: #eee;
+  position: relative;
+  top: 295px;
+  width: 400px;
+  left: -5px;
+  font-size: 20px;
+  color: #333;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 11;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: all 0.3s;
+}
+.container-card-ingredients p{
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.contain-card-image:hover > .container-card-ingredients { 
+  min-height: 50px;
+  height: auto;
+  padding: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  .contain-card-image{
+    width: 350px;
+    height: 350px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .container-card-ingredients{
+    width: 350px;
+  }
+  .contain-card-price{
+    left: 73%;
+  }
+  .contain-card-name{
+    left: -5px;
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contain-card-image{
+    width: 300px;
+    height: 300px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .container-card-ingredients{
+    width: 300px;
+  }
+  .contain-card-name{
+    left: -5px;
+    width: 300px;
+  }
+}

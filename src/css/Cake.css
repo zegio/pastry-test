@@ -1,0 +1,213 @@
+:root {
+  --cake-color: #ecd2b0;
+  --icing-color: #5a3b09;
+  --icing-highlight: #a17a25;
+  -webkit-animation: changeCake 50s infinite;
+  -moz-animation: changeCake 50s infinite;
+  animation: changeCake 50s infinite;
+}
+
+.box-canvas{
+  position: relative;
+  zoom: 20%;
+  top: 70px;
+  width: 400px;
+  height: 370px;
+  transform: rotate3d(1, 1, 1, 5deg);
+}
+
+.box-canvas:hover{
+  transform: rotate3d(1, 1, 1, 10deg);
+}
+
+.is-animated-cake{
+  -webkit-animation: moveCake 5s 75ms;
+  -moz-animation: moveCake 5s 75ms;
+  animation: moveCake 5s 75ms;
+  transition: transform 5s ease-in-out;
+}
+
+.cake-side {
+  position: absolute;
+  top: 55px;
+  width: 400px;
+  height: 200px;
+  background: var(--cake-color);
+  border-radius: 0 0 50% 50%;
+  overflow: hidden;
+  transition: background-color 1s ease;
+}
+
+.cake-side::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 180px;
+  background: white;
+  border-radius: 0 0 50% 50%;
+  top: -40px;
+}
+
+.cake-side::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 170px;
+  background: var(--cake-color);
+  transition: background-color 1s ease;
+  border-radius: 0 0 50% 50%;
+  top: -50px;
+}
+
+.cake-top {
+  position: absolute;
+  top: -20px;
+  width: 400px;
+  height: 150px;
+  background: var(--icing-color);
+  border-radius: 50%;
+  border-bottom: 4px solid var(--icing-highlight);
+  transition: all 1s ease;
+  transition-property: background-color, border-color;
+}
+
+.drips {
+  position: absolute;
+  display: flex;
+  width: 400px;
+  height: 90px;
+  top: 60px;
+}
+
+.drip:nth-child(1) {
+  height: 70px;
+  width: 25px;
+}
+
+.drip:nth-child(2) {
+  height: 100px;
+  width: 35px;
+}
+
+.drip:nth-child(3) {
+  height: 100px;
+  width: 40px;
+}
+
+.drip:nth-child(4) {
+  height: 136px;
+  width: 40px;
+}
+
+.drip:nth-child(5) {
+  height: 115px;
+  width: 35px;
+}
+
+.drip:nth-child(6) {
+  height: 125px;
+  width: 50px;
+}
+
+.drip:nth-child(7) {
+  height: 140px;
+  width: 45px;
+  /* -webkit-animation: animationDrip7 3s infinite 75ms;
+  -moz-animation: animationDrip7 3s infinite 75ms;
+  animation: animationDrip7 3s infinite 75ms; */
+}
+
+.drip:nth-child(8) {
+  height: 115px;
+  width: 30px;
+}
+
+.drip:nth-child(9) {
+  height: 105px;
+  width: 50px;
+  -webkit-animation: animationDrip9 3s infinite 75ms;
+  -moz-animation: animationDrip9 3s infinite 75ms;
+  animation: animationDrip9 3s infinite 75ms;
+}
+.drip:nth-child(10) {
+  height: 85px;
+  width: 30px;
+}
+.drip:nth-child(11) {
+  height: 80px;
+  width: 20px;
+  -webkit-animation: animationDrip11 3s infinite 75ms;
+  -moz-animation: animationDrip11 3s infinite 75ms;
+  animation: animationDrip11 3s infinite 75ms;
+}
+
+.drip {
+  background: var(--icing-color);
+  transition: background-color 1s ease;
+  border-radius: 0 0 50% 50% / 0 0 20% 20%;
+}
+
+@keyframes moveCake {
+  0% {
+    transform: rotate3d(1, 1, 1, 5deg);
+  }
+  15% {
+    transform: rotate3d(1, 1, 1, -10deg);  
+  }
+  40% {
+    transform: rotate3d(1, 1, 1, 15deg);
+  }
+  100% {
+    transform: rotate3d(1, 1, 1, 5deg);  
+  }
+}
+@keyframes animationDrip9 {
+  0% {
+    height: 105px;  
+  }
+  20% {
+    height: 160px;  
+  }
+  100% {
+    height: 105px;
+  }
+}
+@keyframes animationDrip11 {
+  0% {
+    height: 80px;
+  }
+  20% {
+    height: 115px;
+  }
+  100% {
+    height: 80px;
+  }
+}
+
+
+@keyframes changeCake {
+  0% {
+    --icing-color: #5a3b09;
+    --icing-highlight: #a17a25;
+  }
+  25% {
+    --icing-color: #5a3b09;
+    --icing-highlight: #a17a25;
+  }
+  50% {
+    --icing-color: #ca0dc1;
+    --icing-highlight: #e763e1;
+  }
+  65% {
+    --icing-color: #c86100;
+    --icing-highlight: #e78d63;
+  }
+  80% {
+    --icing-color: #f2f602;
+    --icing-highlight: #fdff6a;
+  }
+  100% {
+    --icing-color: #da0000;
+    --icing-highlight: #e76363;
+  }
+}
